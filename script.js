@@ -21,8 +21,7 @@ const WINNING_COMBINATIONS = [
     [0, 4, 8], [2, 4, 6],            // diagonal
 ];
 
-let currentShape = 'circle'; // Startsymbol
-
+let currentShape = 'circle'; 
 function init() {
     render();
 }
@@ -42,7 +41,7 @@ function render() {
             } else if (fields[index] === 'cross') {
                 symbol = getAnimatedCrossSVG();
             }
-            // onclick nur, wenn Feld leer
+            
             const onclick = fields[index] === null ? `onclick="handleClick(this, ${index})"` : '';
             tableHtml += `<td ${onclick}>${symbol}</td>`;
         }
@@ -87,10 +86,10 @@ function checkWinner() {
             fields[a] === fields[b] &&
             fields[a] === fields[c]
         ) {
-            return combo; // Gibt die Gewinn-Kombination zurück
+            return combo; 
         }
     }
-    return null; // Kein Gewinner
+    return null; 
 }
 
 

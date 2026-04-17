@@ -39,7 +39,6 @@ td:hover {
     background-color: rgba(255, 255, 255, 0.3);
 }
 
-/* Nur innere Linien, 5px, weiß */
 tr:not(:last-child) td {
     border-bottom: 15px solid #fff;
 }
